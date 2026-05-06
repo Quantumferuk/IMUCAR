@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<style>
+  .box{fill:#f8fafc;stroke:#0f172a;stroke-width:2;rx:14;ry:14}
+  .title{font-family:Arial,sans-serif;font-size:24px;font-weight:bold;fill:#0f172a}
+  .text{font-family:Arial,sans-serif;font-size:17px;fill:#0f172a}
+  .small{font-family:Arial,sans-serif;font-size:14px;fill:#334155}
+  .wire{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrow)}
+  .power{stroke:#dc2626;stroke-width:4;fill:none;marker-end:url(#arrow)}
+  .gnd{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#arrow)}
+  .sig{stroke:#16a34a;stroke-width:3;fill:none;marker-end:url(#arrow)}
+</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0f172a"/></marker></defs>
+<text x="40" y="45" class="title">ESP32 IMU Test Platformu - Güç ve Sinyal Bağlantısı</text>
+<rect x="60" y="100" width="170" height="95" class="box"/><text x="85" y="135" class="text">Batarya</text><text x="85" y="165" class="small">2S/3S değerlendirme</text>
+<rect x="300" y="85" width="210" height="125" class="box"/><text x="330" y="125" class="text">XL4015 Buck</text><text x="330" y="155" class="small">5V lojik hattı</text><text x="330" y="180" class="small">ESP32 + sensörler</text>
+<rect x="600" y="80" width="240" height="150" class="box"/><text x="645" y="120" class="text">ESP32 Dev Board</text><text x="635" y="150" class="small">I2C: SDA 21 / SCL 22</text><text x="635" y="175" class="small">PWM/GPIO: L298N</text><text x="635" y="200" class="small">USB Serial CSV</text>
+<rect x="930" y="80" width="190" height="100" class="box"/><text x="965" y="120" class="text">MPU6050</text><text x="960" y="150" class="small">Accel + Gyro</text>
+<rect x="930" y="230" width="190" height="95" class="box"/><text x="975" y="270" class="text">GPS</text><text x="955" y="300" class="small">UART + PPS ops.</text>
+<rect x="590" y="420" width="245" height="125" class="box"/><text x="640" y="460" class="text">L298N #1</text><text x="620" y="490" class="small">2 DC motor</text><text x="620" y="515" class="small">ENA/ENB + IN1..IN4</text>
+<rect x="590" y="585" width="245" height="125" class="box"/><text x="640" y="625" class="text">L298N #2</text><text x="620" y="655" class="small">2 DC motor</text><text x="620" y="680" class="small">ENA/ENB + IN1..IN4</text>
+<rect x="900" y="505" width="220" height="125" class="box"/><text x="955" y="545" class="text">L298N #3</text><text x="940" y="575" class="small">Opsiyonel 2 motor</text><text x="940" y="600" class="small">Pinler TBD</text>
+<path d="M230 125 C260 125,270 125,300 125" class="power"/><text x="250" y="112" class="small">Batarya +</text>
+<path d="M510 125 C545 125,565 125,600 125" class="power"/><text x="530" y="112" class="small">5V</text>
+<path d="M840 140 C875 140,895 130,930 130" class="wire"/><text x="860" y="118" class="small">I2C</text>
+<path d="M840 185 C875 210,895 260,930 275" class="sig"/><text x="860" y="245" class="small">UART</text>
+<path d="M230 165 C330 350,500 455,590 475" class="power"/><text x="315" y="350" class="small">Motor beslemesi</text>
+<path d="M230 175 C350 470,510 620,590 640" class="power"/>
+<path d="M230 185 C500 525,760 545,900 560" class="power"/>
+<path d="M720 230 C720 300,710 360,710 420" class="sig"/><text x="730" y="350" class="small">PWM/GPIO</text>
+<path d="M760 230 C770 365,770 480,760 585" class="sig"/>
+<path d="M840 205 C900 300,960 430,1000 505" class="sig"/>
+<path d="M90 205 C240 720,650 735,1040 650" class="gnd"/><text x="360" y="725" class="small">Ortak GND referansı</text>
+<text x="60" y="735" class="small">Not: Motor gücü ve lojik gücü ayrıdır; GND ortaklanır.</text>
+</svg>
