@@ -1,0 +1,21 @@
+# PlatformIO / Arduino build outputs
+.pio/
+.vscode/
+build/
+*.bin
+*.elf
+*.map
+*.log
+
+# MATLAB temporary files
+*.asv
+*.fig
+matlab/results/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data logs can be large
+logs/
+*.csv.tmp
